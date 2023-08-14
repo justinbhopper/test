@@ -1,0 +1,48 @@
+polaris:
+  logging:
+    level:  Warning
+    overrides:
+      RH.Polaris.Http.Request.carefabric: Verbose
+      RH.Polaris.Http.Response.carefabric: Verbose
+    literizer:
+      httpClient:
+        request:
+          enable: true
+          includeBody: true
+          maxBodyLength: 300000
+        response:
+          enable: true
+          includeBody: true
+          maxBodyLength: 300000
+  http:
+    mammoth:
+      clientId: ""
+      clientSecret: ""
+  nswag:
+    scopes:
+      - titan:core
+    swaggerui:
+      customCss: /css/swagger.css
+mammoth:
+  jwt:
+    audience: titan 
+# titan:
+#   disableAuthorization: false
+#   useConfiguredAgencies: false # set to true to use the agencies below
+#   agencies:
+#     - networkId: SAMPLE
+#       database:
+#         server: target-server.claimtrak.com
+#         name: ASP_SAMPLE
+#         user: svc_titan_dev
+#         password: <xxxxxxxx>
+
+carefabric:
+  SdkUrl: <value required>
+  ClientId: <value required>
+  ClientSecret: <value required>
+  ScopeId: <value required>
+
+openai:
+ endpoint: <value required>
+ key: <value required>

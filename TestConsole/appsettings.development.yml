@@ -1,0 +1,6 @@
+polaris:
+  logging:
+    level: Debug
+  bus:
+    global:
+      useMachineName: true

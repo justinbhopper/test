@@ -1,0 +1,25 @@
+polaris:
+  logging:
+    level:  Warning
+  http:
+    mammoth:
+      clientId: ""
+      clientSecret: ""
+  nswag:
+    scopes:
+      - titan:core
+    swaggerui:
+      customCss: /css/swagger.css
+mammoth:
+  jwt:
+    audience: titan 
+# titan:
+#   disableAuthorization: false
+#   useConfiguredAgencies: false # set to true to use the agencies below
+#   agencies:
+#     - networkId: SAMPLE
+#       database:
+#         server: target-server.claimtrak.com
+#         name: ASP_SAMPLE
+#         user: svc_titan_dev
+#         password: <xxxxxxxx>

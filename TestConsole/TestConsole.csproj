@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.AI.OpenAI" />
+    <PackageReference Include="Azure.Identity" />
+    <PackageReference Include="Azure.Security.KeyVault.Keys" />
+    <PackageReference Include="Azure.Storage.Blobs" />
+    <PackageReference Include="JsonDiffPatch.Net" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" />
+    <PackageReference Include="Polly" />
+    <PackageReference Include="RH.Apollo.Clients" />
+    <PackageReference Include="RH.Arcturus" />
+    <PackageReference Include="RH.Athena.Clients.Ingest.Http" />
+    <PackageReference Include="RH.CareFabric.Clients" />
+    <PackageReference Include="RH.Polaris.Bus.Driver.Azure" />
+    <PackageReference Include="RH.Polaris.Bus.Zone" />
+    <PackageReference Include="RH.Polaris.Host.Cli" />
+    <PackageReference Include="RH.Polaris.HttpClient" />
+    <PackageReference Include="RH.Theia.Clients" />
+    <PackageReference Include="RH.Titan.Clients" />
+    <PackageReference Include="SixLabors.ImageSharp" />
+    <PackageReference Include="System.Drawing.Common" />
+  </ItemGroup>
+
+</Project>

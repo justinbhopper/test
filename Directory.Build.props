@@ -1,0 +1,17 @@
+<Project>
+  <PropertyGroup>
+    <Description>Olympia Background Job Processor</Description>
+    <Product>Olympia/Artemis [Remarkable Health]</Product>
+    <InformationalVersion>0.0.1</InformationalVersion>
+    <RepositoryUrl>https://github.com/remarkable-health/artemis.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/remarkable-health/artemis</PackageProjectUrl>
+    <PackageTags>dotnet;olympia;artemis</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <Using Alias="NotNullAttribute" Include="System.Diagnostics.CodeAnalysis.NotNullAttribute" />
+    <Using Alias="PureAttribute" Include="System.Diagnostics.Contracts.PureAttribute" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="RH.Asteria" />
+  </ItemGroup>
+</Project>
