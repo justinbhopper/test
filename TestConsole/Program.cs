@@ -1,25 +1,38 @@
+using System.Text;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Http;
 using Microsoft.Extensions.Options;
-using RH.Apollo.Persistence.Search;
+using NodaTime;
+using NodaTime.Text;
 using RH.Polaris.AppInit;
 using RH.Polaris.HttpClient.Config.Extensions;
 using TestConsole.KeyVaults;
-using TestConsole.Netsmart;
 using TestConsole.OpenAi;
 
 namespace TestConsole;
 
 internal static class Program
 {
+    public class Foo { }
+    public class Bar { }
+
     public static IHostBuilder CreateHostBuilder(string[] args)
     {
+        var encoder = new UTF8Encoding(false, true)
+        {
+            EncoderFallback = new EncoderReplacementFallback(string.Empty)
+        };
+
+        var streamPayload = new MemoryStream();
+        using var streamWriter = new StreamWriter(streamPayload, encoding: encoder, bufferSize: 1024, leaveOpen: true);
+
+        streamWriter.Write('\uD83D' + "👍🏻 👍");
+        streamWriter.Flush();
+
         return CliAppInitHost
             .Initialize()
-            .RegisterTheiaClients()
             .RegisterAzureServiceBusDriver()
-            .AddOptions<CareFabricConfig>()
             .AddOptions<OpenAiConfig>()
             .Add<Contributor>()
             .CreateBuilder(args, ConfigureServices);
@@ -33,20 +46,8 @@ internal static class Program
     private static void ConfigureServices(IServiceCollection services)
     {
         services.AddTransient<TestCommand>();
-        services.AddSingleton<NetsmartTest>();
         services.AddSingleton<KeyVaultTest>();
         services.AddSingleton<OpenAiTest>();
-
-        services
-            .AddSingleton<SearchIndexResolver>()
-            .AddTransient<SearchIndexer>()
-            .AddTransient<FileValueExtractorFactory>();
-
-        services.Configure<CareFabricConfig>(cfg =>
-        {
-            cfg.EnableEncryption = false;
-            cfg.InstanceId = "BellsNotes";
-        });
 
         services.AddStandardHttpClient("carefabric");
     }
@@ -56,9 +57,6 @@ internal static class Program
         public IServiceCollection Contribute(IContributorContext context, IServiceCollection services)
         {
             services.ScanValidators<Contributor>();
-            services
-                .AddTransient<ICareFabricClientFactory, CareFabricClientFactory>()
-                .AddTransient<IConfigureOptions<HttpClientFactoryOptions>, CareFabricClientConfigurator>();
 
             services.AddStandardHttpClient("carefabric");
 

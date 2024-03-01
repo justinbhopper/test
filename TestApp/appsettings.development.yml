@@ -1,9 +1,0 @@
-polaris:
-  logging:
-    level: Debug
-  bus:
-    global:
-      useMachineName: true
-titan:
-  disableAuthorization: true
-  useConfiguredAgencies: false

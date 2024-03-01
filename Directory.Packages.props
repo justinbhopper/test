@@ -2,7 +2,7 @@
 <Project>
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-    <PolarisVersion>46.4.0</PolarisVersion>
+    <PolarisVersion>[55.4.0,56)</PolarisVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="RH.Polaris" Version="$(PolarisVersion)" />
@@ -19,33 +19,37 @@
     <PackageVersion Include="RH.Polaris.Web.Redis" Version="$(PolarisVersion)" />
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="RH.Apollo.Clients" Version="28.16.0" />
-    <PackageVersion Include="RH.Arcturus" Version="12.3.0" />
-    <PackageVersion Include="RH.Asteria" Version="[22.2.0,23)" />
-    <PackageVersion Include="RH.Athena.Clients.Ingest.Http" Version="21.2.0" />
-    <PackageVersion Include="RH.Athena.Query.Clients" Version="15.2.0" />
-    <PackageVersion Include="RH.CareFabric.Clients" Version="11.12.0" />
-    <PackageVersion Include="RH.Edi" Version="13.0.0" />
-    <PackageVersion Include="RH.EmrDirect.Client" Version="13.0.0" />
-    <PackageVersion Include="RH.Gemini.Contracts" Version="16.2.0" />
-    <PackageVersion Include="RH.Metis.Clients" Version="10.0.0" />
-    <PackageVersion Include="RH.Titan.Clients" Version="21.11.0" />
-    <PackageVersion Include="RH.Theia.Clients" Version="18.2.0" />
+    <PackageVersion Include="RH.Asteria" Version="[30.2.0,31)" />
+    <PackageVersion Include="RH.Apollo.Clients" Version="38.2.0" />
+    <PackageVersion Include="RH.Athena.Query.Clients" Version="24.0.0" />
+    <PackageVersion Include="RH.CareFabric.Clients" Version="19.1.0" />
+    <PackageVersion Include="RH.Edi" Version="20.0.0" />
+    <PackageVersion Include="RH.EmrDirect.Client" Version="20.0.0" />
+    <PackageVersion Include="RH.Gemini.Contracts" Version="25.3.0" />
+    <PackageVersion Include="RH.Metis.Clients" Version="20.1.0" />
+    <PackageVersion Include="RH.Philyra.Clients" Version="5.0.0" />
+    <PackageVersion Include="RH.Titan.Clients" Version="29.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="AnyAscii" Version="0.3.1" />
+    <PackageVersion Include="AnyAscii" Version="0.3.2" />
     <PackageVersion Include="Azure.AI.OpenAI" Version="1.0.0-beta.5" />
     <PackageVersion Include="Azure.Identity" Version="1.8.2" />
-    <PackageVersion Include="Azure.Security.KeyVault.Keys" Version="4.4.0" />
-    <PackageVersion Include="Azure.Storage.Blobs" Version="12.14.1" />
-    <PackageVersion Include="CsvHelper" Version="30.0.1" />
-    <PackageVersion Include="Ensure.That" Version="10.1.0" />
-    <PackageVersion Include="JsonDiffPatch.Net" Version="2.3.0" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.2" />
-    <PackageVersion Include="Polly" Version="7.2.3" />
-    <PackageVersion Include="SendGrid" Version="9.28.1" />
+    <PackageVersion Include="Azure.Security.KeyVault.Keys" Version="4.6.0" />
+    <PackageVersion Include="Azure.Storage.Blobs" Version="12.19.1" />
+    <PackageVersion Include="CsvHelper" Version="31.0.2" />
+    <PackageVersion Include="DotLiquid" Version="2.2.692" />
+    <PackageVersion Include="SendGrid" Version="9.29.2" />
     <PackageVersion Include="SharpZipLib" Version="1.4.2" />
+    <PackageVersion Include="SimMetricsCore" Version="2.1.0" />
     <PackageVersion Include="SixLabors.ImageSharp" Version="2.1.3" />
     <PackageVersion Include="System.Drawing.Common" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageVersion Include="Ensure.That" Version="10.1.0" />
+    <PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.2" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+    <PackageVersion Include="MartinCostello.Logging.XUnit" Version="0.3.0" />
+    <PackageVersion Include="xunit" Version="2.7.0" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="2.5.7" />
   </ItemGroup>
 </Project>

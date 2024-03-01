@@ -4,4 +4,3 @@ namespace System.ComponentModel.DataAnnotations;
 public class MaxAttribute : Attribute
 {
 }
-

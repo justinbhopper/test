@@ -6,6 +6,8 @@
     <RepositoryUrl>https://github.com/remarkable-health/artemis.git</RepositoryUrl>
     <PackageProjectUrl>https://github.com/remarkable-health/artemis</PackageProjectUrl>
     <PackageTags>dotnet;olympia;artemis</PackageTags>
+    <!-- TODO: Enable CA -->
+    <RHEnableCodeAnalysis>false</RHEnableCodeAnalysis>
   </PropertyGroup>
   <ItemGroup>
     <Using Alias="NotNullAttribute" Include="System.Diagnostics.CodeAnalysis.NotNullAttribute" />

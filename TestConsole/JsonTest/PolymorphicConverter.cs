@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace TestConsole.JsonTest;
@@ -8,7 +8,7 @@ public abstract class PolymorphicConverter<T> : JsonConverter
 {
     private readonly IJsonPolymorphicDiscriminator _discriminator;
 
-    public PolymorphicConverter(IJsonPolymorphicDiscriminator discriminator)
+    protected PolymorphicConverter(IJsonPolymorphicDiscriminator discriminator)
     {
         _discriminator = discriminator;
     }

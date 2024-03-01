@@ -12,8 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".solution", ".solution", "{
 		Directory.Packages.props = Directory.Packages.props
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApp", "TestApp\TestApp.csproj", "{4E78A54A-E574-4039-825C-DDE1B6FF1E1B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,10 +22,6 @@ Global
 		{B7FCB5C9-C032-4060-9EB1-B2B807EA5C9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7FCB5C9-C032-4060-9EB1-B2B807EA5C9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7FCB5C9-C032-4060-9EB1-B2B807EA5C9B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4E78A54A-E574-4039-825C-DDE1B6FF1E1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4E78A54A-E574-4039-825C-DDE1B6FF1E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4E78A54A-E574-4039-825C-DDE1B6FF1E1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4E78A54A-E574-4039-825C-DDE1B6FF1E1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,10 +3,6 @@ using System.Text;
 using Azure.Identity;
 using Azure.Security.KeyVault.Keys;
 using Azure.Security.KeyVault.Keys.Cryptography;
-using NodaTime;
-using RH.Apollo.Contracts.Annotations;
-using RH.Apollo.Contracts.Models;
-using RH.Apollo.Contracts.Resources;
 
 namespace TestConsole.KeyVaults;
 

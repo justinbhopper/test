@@ -1,12 +1,9 @@
-﻿namespace System.ComponentModel.DataAnnotations;
+namespace System.ComponentModel.DataAnnotations;
 
 public static class CollectionExtensions
 {
     public static int FindIndex<T>(this IEnumerable<T> collection, Func<T, bool> predicate)
     {
-        if (collection is null)
-            throw new ArgumentNullException(nameof(collection));
-
         var index = 0;
 
         foreach (var item in collection)
@@ -22,9 +19,6 @@ public static class CollectionExtensions
 
     public static bool RemoveWhere<T>(this ICollection<T> collection, Func<T, bool> predicate)
     {
-        if (collection is null)
-            throw new ArgumentNullException(nameof(collection));
-
         var matches = collection.Where(predicate).ToList();
         var anyMatches = false;
 
@@ -43,9 +37,6 @@ public static class CollectionExtensions
 
     public static void AddRange<T>(this ICollection<T> collection, IEnumerable<T> range)
     {
-        if (collection is null)
-            throw new ArgumentNullException(nameof(collection));
-
         foreach (var item in range)
         {
             collection.Add(item);
@@ -116,10 +107,10 @@ public static class CollectionExtensions
 
     public static IEnumerable<T> Concat<T>(this IEnumerable<T> source, T item)
     {
-        return source.Concat(new[] { item });
+        return source.Concat([item]);
     }
 
-    public static K MaxOrDefault<T, K>(this IEnumerable<T> source, Func<T, K?> selector, K defaultValue)
+    public static TProperty MaxOrDefault<T, TProperty>(this IEnumerable<T> source, Func<T, TProperty?> selector, TProperty defaultValue)
     {
         if (!source.Any())
             return defaultValue;
@@ -127,7 +118,7 @@ public static class CollectionExtensions
         return source.Max(selector) ?? defaultValue;
     }
 
-    public static K MinOrDefault<T, K>(this IEnumerable<T> source, Func<T, K?> selector, K defaultValue)
+    public static TProperty MinOrDefault<T, TProperty>(this IEnumerable<T> source, Func<T, TProperty?> selector, TProperty defaultValue)
     {
         if (!source.Any())
             return defaultValue;
